@@ -28,8 +28,9 @@ h2 {
 .game-container {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: 1fr 1.5fr;
+  grid-template-rows: 1fr 0.5fr 1fr;
   width: 97%;
+  height: 90vh;
   gap: 24px;
   margin: 32px auto;
 }
@@ -43,6 +44,7 @@ h2 {
 
 .bet-container {
   grid-column: 2;
+  grid-row: 1 / 3;
 }
 .wallet-container {
   grid-column: 3;
@@ -53,6 +55,26 @@ h2 {
 }
 .race-container {
   grid-column: 2 / span 2;
+}
+.weather-container {
+  grid-column: 3;
+}
+
+/* weather */
+.weather-opts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.weather-img {
+  width: 32px;
+}
+.selected-weather {
+  filter: invert(55%) sepia(68%) saturate(624%) hue-rotate(66deg)
+    brightness(92%) contrast(94%);
 }
 
 /* form */

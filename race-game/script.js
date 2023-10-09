@@ -8,6 +8,7 @@ const btnBet = document.querySelector("#place-bet");
 const walletDisplay = document.querySelector(".wallet-amount");
 const raceResultDisplay = document.querySelector(".race-result");
 const raceContainer = document.querySelector(".race-container");
+const weatherDisplay = document.querySelector(".daily-weather");
 
 // initial values --------------------
 const competitors = [
@@ -22,7 +23,7 @@ const competitors = [
   {
     name: "Midnight Shadow",
     speed: 65,
-    betterWhen: "rain",
+    betterWhen: "rainy",
     age: 5,
     lastRace: 3,
     points: 0,
@@ -46,7 +47,7 @@ const competitors = [
   {
     name: "Starfire",
     speed: 70,
-    betterWhen: "sunny",
+    betterWhen: "snowy",
     age: 5,
     lastRace: 8,
     points: 0,
@@ -54,7 +55,7 @@ const competitors = [
   {
     name: "Dakota",
     speed: 69,
-    betterWhen: "rain",
+    betterWhen: "sunny",
     age: 3,
     lastRace: 1,
     points: 0,
@@ -62,7 +63,7 @@ const competitors = [
   {
     name: "Maverick",
     speed: 70,
-    betterWhen: "cloudy",
+    betterWhen: "windy",
     age: 3,
     lastRace: 5,
     points: 0,
@@ -78,7 +79,7 @@ const competitors = [
   {
     name: "Apollo",
     speed: 68,
-    betterWhen: "rain",
+    betterWhen: "rainy",
     age: 2,
     lastRace: 9,
     points: 0,
@@ -86,7 +87,7 @@ const competitors = [
   {
     name: "Willowbrook",
     speed: 67,
-    betterWhen: "cloudy",
+    betterWhen: "windy",
     age: 2,
     lastRace: 6,
     points: 0,
@@ -94,9 +95,11 @@ const competitors = [
 ];
 let wallet = 500;
 let weather = "sunny";
+const weatherOp = ["sunny", "windy", "cloudy", "rainy", "snowy"];
 
 // functions -------------------------
 function addCompetitors() {
+  setWeather();
   //clean
   tableBody.innerHTML = "";
   select.innerHTML = "";
@@ -195,7 +198,7 @@ function race() {
     const luckNumber = Math.trunc(Math.random() * 10) + 1;
     competitors[i].points = Math.trunc(
       competitors[i].speed +
-        parseInt(`${competitors[i].betterWhen === weather ? 1 : 0}`) +
+        parseInt(`${competitors[i].betterWhen === weather ? 3 : 0}`) +
         parseInt(`${competitors[i].lastRace <= 5 ? 2 : 1}`) +
         parseInt(`${competitors[i].age <= 3 ? 2 : 1}`) +
         luckNumber
@@ -218,8 +221,21 @@ function raceResults() {
   addCompetitors();
 }
 
+function setWeather() {
+  //clear last day
+  const lastWeather = document.querySelector(".selected-weather");
+  lastWeather.classList.remove("selected-weather");
+
+  //add new day
+  const dayWeather = Math.trunc(Math.random() * 5);
+  weather = weatherOp[dayWeather];
+  const newWeather = document.querySelector(`.${weather}`);
+  newWeather.classList.add("selected-weather");
+}
+
 // init
 addCompetitors();
+// setWeather();
 
 //event
 btnBet.addEventListener("click", placeBet);
