@@ -1,0 +1,106 @@
+/* import */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+/* general  */
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #061f3d;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 48px;
+  font-family: "Inter", sans-serif;
+}
+
+/* text */
+h2 {
+  margin: 0;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.wallet-amount {
+  font-size: 64px;
+  font-weight: 700;
+  display: block;
+  margin-top: 100px;
+}
+
+/* cols */
+.col-one {
+  width: 40%;
+  margin-right: 32px;
+}
+
+.col-two {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* containers */
+.game-container {
+  display: flex;
+}
+.container {
+  background-color: #0f3056;
+  min-height: 400px;
+  margin-bottom: 32px;
+  border-radius: 8px;
+  text-align: center;
+  color: #fff;
+  padding: 24px 16px;
+}
+
+.container.big {
+  width: 100%;
+}
+
+.container.small {
+  width: 50%;
+}
+
+/* form */
+form select,
+form input,
+form button {
+  /* font-family: inherit; */
+  padding: 8px 10px;
+  width: 50%;
+  border-radius: 4px;
+  font-size: 18px;
+  border: none;
+}
+
+/* table */
+tbody tr:nth-child(odd) {
+  background-color: #294667;
+}
+td {
+  padding: 16px 0;
+}
+table {
+  width: 100%;
+  margin-top: 32px;
+}
+
+.hidden {
+  display: none;
+}
+
+.race-result {
+  font-size: 48px;
+}
+
+.race-container.lost {
+  border: red solid 3px;
+}
+
+.race-container.win {
+  border: greenyellow solid 3px;
+}
+
+.race-container.racing {
+  border: #294667 solid 3px;
+}
