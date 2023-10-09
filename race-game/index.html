@@ -8,48 +8,40 @@
   </head>
   <body>
     <div class="game-container">
-      <div class="col-one">
-        <div class="competitors-container container">
-          <h2>Competitors</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Medium Speed</th>
-                <th>Better when</th>
-                <th>Age</th>
-                <th>Last race</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-        </div>
+      <div class="competitors-container container">
+        <h2>Competitors</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Medium Speed</th>
+              <th>Better when</th>
+              <th>Age</th>
+              <th>Last race</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
       </div>
-      <div class="col-two">
-        <div class="bet-container container small">
-          <h2>Place your bet</h2>
-          <form>
-            <select name="horses" id="select-horse">
-              <option value="0">Crazy Sam</option>
-              <option value="1">Duni</option>
-              <option value="2">Chuky</option>
-            </select>
-            <input
-              type="number"
-              placeholder="define amount"
-              id="amount-input"
-            />
-            <button id="place-bet">Place my bet</button>
-          </form>
-        </div>
-        <div class="wallet-container container small">
-          <h2>Wallet</h2>
-          <span class="wallet-amount">€500</span>
-        </div>
-        <div class="race-container container big">
-          <h2>Race</h2>
-          <span class="race-result"></span>
-        </div>
+      <div class="bet-container container">
+        <h2>Place your bet</h2>
+        <form>
+          <select name="horses" id="select-horse">
+            <option value="0">Crazy Sam</option>
+            <option value="1">Duni</option>
+            <option value="2">Chuky</option>
+          </select>
+          <input type="number" placeholder="define amount" id="amount-input" />
+          <button id="place-bet">Place my bet</button>
+        </form>
+      </div>
+      <div class="wallet-container container">
+        <h2>Wallet</h2>
+        <span class="wallet-amount">€500</span>
+      </div>
+      <div class="race-container container">
+        <h2>Race</h2>
+        <span class="race-result"></span>
       </div>
     </div>
     <script src="script.js"></script>

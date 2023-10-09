@@ -7,9 +7,6 @@
 }
 body {
   background-color: #061f3d;
-  display: flex;
-  flex-direction: column;
-  padding: 32px 48px;
   font-family: "Inter", sans-serif;
 }
 
@@ -24,41 +21,38 @@ h2 {
   font-size: 64px;
   font-weight: 700;
   display: block;
-  margin-top: 100px;
-}
-
-/* cols */
-.col-one {
-  width: 40%;
-  margin-right: 32px;
-}
-
-.col-two {
-  width: 60%;
-  display: flex;
-  flex-wrap: wrap;
+  margin-top: 50px;
 }
 
 /* containers */
 .game-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1.5fr;
+  width: 97%;
+  gap: 24px;
+  margin: 32px auto;
 }
 .container {
   background-color: #0f3056;
-  min-height: 400px;
-  margin-bottom: 32px;
   border-radius: 8px;
   text-align: center;
   color: #fff;
   padding: 24px 16px;
 }
 
-.container.big {
-  width: 100%;
+.bet-container {
+  grid-column: 2;
 }
-
-.container.small {
-  width: 50%;
+.wallet-container {
+  grid-column: 3;
+}
+.competitors-container {
+  grid-column: 1;
+  grid-row: 1 / -1;
+}
+.race-container {
+  grid-column: 2 / span 2;
 }
 
 /* form */
