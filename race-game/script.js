@@ -19,6 +19,7 @@ const competitors = [
     age: 3,
     lastRace: 7,
     points: 0,
+    img: "img/thunderbolt.png",
   },
   {
     name: "Midnight Shadow",
@@ -27,6 +28,7 @@ const competitors = [
     age: 5,
     lastRace: 3,
     points: 0,
+    img: "img/midnight-shadow.png",
   },
   {
     name: "Spirit",
@@ -35,6 +37,7 @@ const competitors = [
     age: 2,
     lastRace: 2,
     points: 0,
+    img: "img/spirit.png",
   },
   {
     name: "Bella Luna",
@@ -43,6 +46,7 @@ const competitors = [
     age: 3,
     lastRace: 4,
     points: 0,
+    img: "img/bella-luna.png",
   },
   {
     name: "Starfire",
@@ -51,6 +55,7 @@ const competitors = [
     age: 5,
     lastRace: 8,
     points: 0,
+    img: "img/starfire.png",
   },
   {
     name: "Dakota",
@@ -59,6 +64,7 @@ const competitors = [
     age: 3,
     lastRace: 1,
     points: 0,
+    img: "img/dakota.png",
   },
   {
     name: "Maverick",
@@ -67,6 +73,7 @@ const competitors = [
     age: 3,
     lastRace: 5,
     points: 0,
+    img: "img/maverick.png",
   },
   {
     name: "Serenity",
@@ -75,6 +82,7 @@ const competitors = [
     age: 2,
     lastRace: 10,
     points: 0,
+    img: "img/serenity.png",
   },
   {
     name: "Apollo",
@@ -83,6 +91,7 @@ const competitors = [
     age: 2,
     lastRace: 9,
     points: 0,
+    img: "img/apollo.png",
   },
   {
     name: "Willowbrook",
@@ -91,6 +100,7 @@ const competitors = [
     age: 2,
     lastRace: 6,
     points: 0,
+    img: "img/willowbrook.png",
   },
 ];
 let wallet = 500;
@@ -108,19 +118,24 @@ function addCompetitors() {
     // row
     const row = document.createElement("tr");
     //info
+    const picture = document.createElement("td");
+    const img = document.createElement("img");
     const compName = document.createElement("td");
     const speed = document.createElement("td");
     const weather = document.createElement("td");
     const age = document.createElement("td");
     const lastRace = document.createElement("td");
     //add info
+    img.setAttribute("src", competitors[i].img);
+    img.classList.add("horse-img");
+    picture.append(img);
     compName.textContent = competitors[i].name;
     speed.textContent = `${competitors[i].speed}km/h`;
     weather.textContent = competitors[i].betterWhen;
     age.textContent = `${competitors[i].age}yr`;
     lastRace.textContent = `${competitors[i].lastRace}°`;
     //append
-    row.append(compName, speed, weather, age, lastRace);
+    row.append(picture, compName, speed, weather, age, lastRace);
     tableBody.appendChild(row);
   }
 

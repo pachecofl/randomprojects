@@ -13,7 +13,7 @@ body {
 /* text */
 h2 {
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   font-size: 24px;
   text-transform: uppercase;
 }
@@ -31,9 +31,8 @@ h2 {
   grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: 1fr 0.5fr 1fr;
   width: 97%;
-  height: 90vh;
   gap: 24px;
-  margin: 32px auto;
+  margin: 16px auto;
 }
 .container {
   background: linear-gradient(#2e2e30, #1d1e20);
@@ -103,7 +102,7 @@ tbody tr:nth-child(odd) {
   background-color: #151515;
 }
 td {
-  padding: 16px 0;
+  padding: 12px 0;
 }
 table {
   width: 100%;
@@ -114,6 +113,7 @@ table {
 tr td:first-child {
   border-top-left-radius: 6px; /* Adjust the radius as needed */
   border-bottom-left-radius: 6px; /* Adjust the radius as needed */
+  padding-left: 14px;
 }
 
 /* Apply border radius to the top right cell in the row */
@@ -124,6 +124,11 @@ tr td:last-child {
 
 th {
   padding: 24px 0;
+}
+
+.horse-img {
+  width: 32px;
+  border-radius: 100px;
 }
 
 .hidden {
