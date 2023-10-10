@@ -190,6 +190,8 @@ function placeBet() {
   };
 
   setTimeout(betResult, 3000);
+  //update ui
+  setTimeout(addCompetitors, 3000);
 }
 
 function race() {
@@ -217,8 +219,6 @@ function raceResults() {
     competitors[indexes[i]].lastRace = position;
     position++;
   }
-  // update UI
-  addCompetitors();
 }
 
 function setWeather() {
