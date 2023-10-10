@@ -6,13 +6,14 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #061f3d;
+  background-color: #1c1d1f;
   font-family: "Inter", sans-serif;
 }
 
 /* text */
 h2 {
   margin: 0;
+  margin-bottom: 32px;
   font-size: 24px;
   text-transform: uppercase;
 }
@@ -35,8 +36,9 @@ h2 {
   margin: 32px auto;
 }
 .container {
-  background-color: #0f3056;
+  background: linear-gradient(#2e2e30, #1d1e20);
   border-radius: 8px;
+  border: 1px solid #404042;
   text-align: center;
   color: #fff;
   padding: 24px 16px;
@@ -82,23 +84,46 @@ form select,
 form input,
 form button {
   /* font-family: inherit; */
-  padding: 8px 10px;
-  width: 50%;
+  padding: 12px 10px;
+  width: 90%;
   border-radius: 4px;
   font-size: 18px;
   border: none;
+  margin-top: 24px;
+}
+
+#place-bet {
+  background-color: #34bd1d;
+  color: #0d3310;
+  text-transform: uppercase;
 }
 
 /* table */
 tbody tr:nth-child(odd) {
-  background-color: #294667;
+  background-color: #151515;
 }
 td {
   padding: 16px 0;
 }
 table {
   width: 100%;
-  margin-top: 32px;
+  /* border-collapse: collapse; */
+  border-spacing: 0;
+}
+/* Apply border radius to the top left cell in the row */
+tr td:first-child {
+  border-top-left-radius: 6px; /* Adjust the radius as needed */
+  border-bottom-left-radius: 6px; /* Adjust the radius as needed */
+}
+
+/* Apply border radius to the top right cell in the row */
+tr td:last-child {
+  border-top-right-radius: 6px; /* Adjust the radius as needed */
+  border-bottom-right-radius: 6px; /* Adjust the radius as needed */
+}
+
+th {
+  padding: 24px 0;
 }
 
 .hidden {
@@ -106,7 +131,7 @@ table {
 }
 
 .race-result {
-  font-size: 48px;
+  font-size: 40px;
 }
 
 .race-container.lost {
