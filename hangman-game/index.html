@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Hanging Man</title>
+  </head>
+  <body>
+    <h1>Hangman</h1>
+    <p>find the hidden animal, enter a letter</p>
+    <!-- hangman -->
+    <div class="game-container">
+      <svg height="250" width="200" class="figure-container">
+        <!-- rod -->
+        <line x1="60" y1="20" x2="140" y2="20" />
+        <line x1="140" y1="20" x2="140" y2="40" />
+        <line x1="60" y1="20" x2="60" y2="190" />
+        <line x1="40" y1="190" x2="80" y2="190" />
+        <!-- head -->
+        <circle class="hangman hide" cx="140" cy="60" r="20" />
+        <!-- body -->
+        <line class="hangman hide" x1="140" y1="80" x2="140" y2="140" />
+        <!-- arms -->
+        <line class="hangman hide" x1="140" y1="100" x2="165" y2="110" />
+        <line class="hangman hide" x1="140" y1="100" x2="115" y2="110" />
+        <!-- legs -->
+        <line class="hangman hide" x1="140" y1="140" x2="150" y2="180" />
+        <line class="hangman hide" x1="140" y1="140" x2="130" y2="180" />
+      </svg>
+      <div class="wrong-container">
+        <h2>Wrong letters</h2>
+        <ul class="letter-list"></ul>
+      </div>
+    </div>
+    <!-- pressed letters -->
+
+    <!-- word container -->
+    <div id="word-container">
+      <div class="letter-box">
+        <span class="letter"></span>
+      </div>
+      <div class="letter-box">
+        <span class="letter"></span>
+      </div>
+      <div class="letter-box">
+        <span class="letter"></span>
+      </div>
+      <div class="letter-box">
+        <span class="letter"></span>
+      </div>
+    </div>
+
+    <!-- MODALS -->
+    <div class="modal hidden">
+      <h1>GAME OVER</h1>
+      <p>Sorry, you lost the game!</p>
+      <button>Play again</button>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <!-- notification  -->
+    <div class="notification-container">
+        <p>Enter a LETTER to play.</p>
+    </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

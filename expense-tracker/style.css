@@ -1,0 +1,139 @@
+/* IMPORT */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ececec;
+  font-family: "Roboto", sans-serif;
+}
+
+/* TEXT */
+h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+h2 {
+  font-size: 18px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #939393;
+  margin-bottom: 16px;
+  margin-top: 24px;
+}
+
+.balance-text {
+  text-transform: uppercase;
+}
+
+.income {
+  color: #23ba23;
+  font-weight: 700;
+}
+.expense {
+  color: #a21910;
+  font-weight: 700;
+}
+
+.total-balance {
+  font-size: 24px;
+  margin-top: 4px;
+  font-weight: 700;
+}
+/* LAYOUT */
+article {
+  width: 400px;
+  margin: 48px auto;
+}
+
+.inc-exp-container {
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-radius: 4px;
+  margin-top: 24px;
+}
+.divider {
+  width: 2px;
+  background-color: #e3e3e3;
+  height: 50px;
+}
+
+.income-container,
+.expense-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 6px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+li {
+  display: flex;
+  background-color: #fff;
+  padding: 10px 12px;
+  border-radius: 4px;
+  justify-content: space-between;
+  position: relative;
+}
+
+li.plus {
+  border-right: 4px solid #23ba23;
+}
+
+li.minus {
+  border-right: 4px solid #a21910;
+}
+
+li:hover .delete {
+  opacity: 100%;
+}
+
+.delete {
+  background-color: #a21910;
+  color: #fff;
+  padding: 2px 6px;
+  cursor: pointer;
+  position: absolute;
+  left: -20px;
+  top: 8px;
+  opacity: 0%;
+  transition: opacity 0.3s ease;
+}
+
+input {
+  display: block;
+  height: 42px;
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #bcbcbc;
+  border-radius: 4px;
+  font-size: 16px;
+  padding-left: 16px;
+}
+
+button {
+  background-color: rgb(105, 59, 93);
+  color: #fff;
+  width: 100%;
+  height: 42px;
+  border: none;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Expense Tracker</title>
+  </head>
+  <body>
+    <article>
+      <h1>Expense Tracker</h1>
+      <section class="balance-container">
+        <p class="balance-text balance">Your balance</p>
+        <p class="total-balance">$150.00</p>
+        <div class="inc-exp-container">
+          <div class="income-container">
+            <p class="balance-text">Income</p>
+            <p class="income">$300.00</p>
+          </div>
+          <div class="divider"></div>
+          <div class="expense-container">
+            <p class="balance-text">Expense</p>
+            <p class="expense">$400.00</p>
+          </div>
+        </div>
+        <section>
+          <h2>History</h2>
+          <ul class="expence-history"></ul>
+        </section>
+        <section>
+          <h2>Add new transation</h2>
+          <form>
+            <label for="text">Text</label>
+            <input type="text" id="text" placeholder="Salary" />
+            <label for="amount">Amount (Add " - " for expenses)</label>
+            <input type="text" id="amount" placeholder="2000" />
+            <button class="add-transation">Add transation</button>
+          </form>
+        </section>
+      </section>
+    </article>
+    <script src="script.js"></script>
+  </body>
+</html>
